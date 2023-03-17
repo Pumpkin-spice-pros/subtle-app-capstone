@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-
+// added .env and prisma to gitignore
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <nav>
