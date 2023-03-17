@@ -20,18 +20,21 @@ model User {
   password   String
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
-  habits Habits[]
 }
 
 model Habits {
   id        Int    @id @default(autoincrement())
   name   String
-  userId   Int
-  user User @relation(fields: [userId], references: [id])
   description   String?
   benefits String?
-  streak Int?
-  longestStreak Int?
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
+
+model UserHabits {
+  id        Int    @id @default(autoincrement())
+  userId  Int
+  habitId Int
+  streak  Int?
+  longestStreak  Int?
 }
