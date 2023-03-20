@@ -16,7 +16,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
 				{/* <div>
 					<Image className={styles.mainLogo} src={logo} alt="logo" />
 				</div> */}
-				<nav className={styles.sideNav}>
+				<nav className={styles.webNav}>
 					<Link href="/dashboard">
 						<Image
 							className={styles.sideNavIcon}
@@ -54,6 +54,9 @@ export default function layout({ children }: { children: React.ReactNode }) {
 						/>
 					</Link>
 				</nav>
+        <nav className={styles.phoneNav}>
+          
+        </nav>
 				{children}
 			</body>
 		</html>
