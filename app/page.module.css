@@ -1,3 +1,111 @@
+.webNav{
+  background-color: #eeeeee;
+  opacity: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75vh;
+  width: 3vw;
+  border-radius: 0.5rem;
+  position: fixed;
+  left: 2vw;
+  top: 12vh;
+  /* padding; */
+}
+
+@media (max-width = 500px){
+  .webNav{
+    display: none;
+  }
+  .phoneNav{
+    display: flex;
+
+  }
+
+}
+
+.week {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+}
+
+.dailyHabitsList {
+  position: relative;
+  top: 100px;
+}
+
+.mainHeader {
+  font-size: 48px;
+  margin-top: 8px;
+}
+
+.weekDaySpan {
+  height: 60px;
+  margin-top: 8px;
+  width: 60px;
+  border-radius: 100%;
+  border: solid white 2px;
+  margin-left: 20px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  display: flex;
+  background-color: slategray;
+
+}
+
+.mainPage{
+  background-color: #0092ca;
+  opacity: 75%;
+  color: white;
+  border-radius: 0.5rem;
+  height: 75vh;
+  width: 88vw;
+  position: fixed;
+  left: 7vw;
+  top: 12vh;
+}
+
+.mainLogo {
+  position: absolute;
+  left: 48px;
+  top: 2vh;
+  height: 8vh;
+  width: 4vw;
+}
+
+.sideNavIcon {
+  width: 100%;
+  height: 100%;
+  opacity: 100%;
+  
+}
+
+.bodyEle {
+  margin: 0;
+  background: url("../assets/bg.jpg");
+	box-sizing: "border-box";
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .main {
   display: flex;
   flex-direction: column;
@@ -268,4 +376,304 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+/*Habits Page Styles */
+ .habitMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+
+}
+
+.habits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.habitCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.habitCardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  margin-right: 1rem;
+}
+
+.habitCardContainer:last-child {
+  margin-right: 0;
+}
+
+.habitCardImage {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.habitCardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.habitCardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.habitCardDescription {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.habitCardDescription i {
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.habitCardStreak {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.habitCardLink {
+  margin-top: auto;
+}
+
+.habitCardLink a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.habitCardLink a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.habitCardContainer {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .habitCardContainer {
+    margin-right: 1rem;
+  }
+}
+
+
+/* Followers Page Styles */
+.followersMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.followers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.followersCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.followersCardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  margin-right: 1rem;
+}
+
+.followersCardContainer:last-child {
+  margin-right: 0;
+}
+
+.followersCardImage {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.followersCardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.followersCardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.followersCardDescription {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.followersCardDescription i {
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.followersCardStreak {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.followersCardLink {
+  margin-top: auto;
+}
+
+.followersCardLink a {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.followersCardLink a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Display habit cards horizontally */
+.followersCardContainer {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .followersCardContainer {
+    margin-right: 1rem;
+  }
+}
+
+/* Profile Page Styles */
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profileUsername {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+  color:#46BCDE;
+}
+
+.profileName {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color:#46BCDE
+}
+
+.profileStreak {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+  color:#46BCDE;
+}
+
+.profileLine {
+  height: 3px;
+  width: 300%;
+  background-color: #ccc;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: -20rem;
+}
+
+.profileLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.profileButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem;
+  justify-content: space-between;
+}
+
+.profileButton:hover {
+  background-color: #333;
+  color: #fff;
 }
