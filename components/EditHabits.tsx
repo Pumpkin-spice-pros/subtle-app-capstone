@@ -1,17 +1,18 @@
 import { useState, FormEvent } from 'react';
 
-interface AddHabitFormProps {
-  onSubmit: (formData: { name: string; description: string; frequency: string }) => void;
+interface EditHabitFormProps {
+  habit: { id: number; name: string; description: string; frequency: string };
+  onSubmit: (formData: { id: number; name: string; description: string; frequency: string }) => void;
 }
 
-export default function AddHabitForm({ onSubmit }: AddHabitFormProps) {
-  const [name, setName] = useState('');
-  const [description, setDescription] = useState('');
-  const [frequency, setFrequency] = useState('');
+export default function EditHabitForm({ habit, onSubmit }: EditHabitFormProps) {
+  const [name, setName] = useState(habit.name);
+  const [description, setDescription] = useState(habit.description);
+  const [frequency, setFrequency] = useState(habit.frequency);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit({ name, description, frequency });
+    onSubmit({ id: habit.id, name, description, frequency });
   };
 
   return (
@@ -50,7 +51,7 @@ export default function AddHabitForm({ onSubmit }: AddHabitFormProps) {
         </select>
       </div>
       <button type="submit" className="btn btn-primary">
-        Add Habit
+        Save Changes
       </button>
     </form>
   );

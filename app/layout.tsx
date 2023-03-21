@@ -1,21 +1,16 @@
-// make layout background only for entire app
+import styles from './page.module.css';
 
-import Head from "next/head";
-
-export const metadata = {
-    title: 'Subtle'
-}
+// export const metadata = {
+//     title: 'Subtle'
+// }
 export default function Layout({ children }: { children: React.ReactNode}) {
   return (
 		<html>
-			<body
-				className=""
-				style={{
-					background: 'url("https://wallpaperaccess.com/full/358034.jpg")',
-                    boxSizing: 'border-box'
-				}}>
-				{children}
-			</body>
+			<head>
+				<title>Subtle</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</head>
+			<body className={styles.bodyEle}>{children}</body>
 		</html>
 	);
 }
