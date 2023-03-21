@@ -1,12 +1,14 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import homeIcon from "../../assets/home.png";
 import calendarIcon from "../../assets/calendar.png";
 import userIcon from '../../assets/user.png';
 import brainIcon from '../../assets/brain.png';
-import logo from '../../assets/main-logo.png';
+import logo from '../../assets/S.png';
 import styles from "../page.module.css";
+import phoneLogo from '../../assets/subtle-phone-logo.png';
+import menuIcon from '../../assets/hamburger-menu-icon.png';
 
 // added .env and prisma to gitignore
 export default function layout({ children }: { children: React.ReactNode }) {
@@ -19,7 +21,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
 				<nav className={styles.webNav}>
 					<Link href="/dashboard">
 						<Image
-							className={styles.sideNavIcon}
+							className={styles.logoInNav}
 							src={logo}
 							height={512}
 							width={512}
@@ -54,9 +56,30 @@ export default function layout({ children }: { children: React.ReactNode }) {
 						/>
 					</Link>
 				</nav>
-        <nav className={styles.phoneNav}>
-          
-        </nav>
+				<nav className={styles.phoneNav}>
+            <Image 
+            height={78} 
+            width={78} 
+            alt='menu' 
+            src={menuIcon}
+            style={{
+              position: 'absolute',
+              left: '0px',
+              top: '15%',
+              height: '70%',
+              width: '15%',
+              margin: '0px',
+            }}
+            />
+					<Image
+          style={{
+            height: '50%',
+            width: '50%'
+          }}
+						src={phoneLogo}
+            alt='logo'
+					/>
+				</nav>
 				{children}
 			</body>
 		</html>
