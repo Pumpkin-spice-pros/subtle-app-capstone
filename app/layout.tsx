@@ -1,8 +1,8 @@
 import styles from './page.module.css';
 
-// export const metadata = {
-//     title: 'Subtle'
-// }
+export const metadata = {
+    title: 'Subtle'
+}
 export default function Layout({ children }: { children: React.ReactNode}) {
   return (
 		<html>
