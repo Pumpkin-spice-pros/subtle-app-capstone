@@ -2,6 +2,8 @@
 import AuthModal from "@/components/AuthModal";
 import "./globals.css";
 
+
+
 export default function Main() {
 	return (
 		<div
