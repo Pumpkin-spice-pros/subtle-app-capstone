@@ -6,12 +6,21 @@ import calendarIcon from "../../assets/calendar.png";
 import userIcon from '../../assets/user.png';
 import brainIcon from '../../assets/brain.png';
 import logo from '../../assets/S.png';
+import chat from '../../assets/chat.png';
 import styles from "../page.module.css";
 import phoneLogo from '../../assets/subtle-phone-logo.png';
 import menuIcon from '../../assets/hamburger-menu-icon.png';
+import { ChatGPT } from "@/components/chatGPT";
+
+
 
 // added .env and prisma to gitignore
 export default function layout({ children }: { children: React.ReactNode }) {
+	const [isOpen, setIsOpen] = React.useState(false);
+
+	const openChat = () => {
+		setIsOpen(!isOpen);
+	};
 	return (
 		<html>
 			<body className={styles.bodyEle}>
@@ -55,7 +64,17 @@ export default function layout({ children }: { children: React.ReactNode }) {
 							alt="Profile"
 						/>
 					</Link>
+					<button onClick={openChat}>
+            		<Image
+              		className={styles.sideNavIcon}
+              		src={chat}
+              		height={512}
+              		width={512}
+              		alt="Chat"
+            		/>
+          			</button>
 				</nav>
+				{isOpen && <ChatGPT isOpen={isOpen} onClose={openChat} />}
 				<nav className={styles.phoneNav}>
             <Image 
             height={78} 
